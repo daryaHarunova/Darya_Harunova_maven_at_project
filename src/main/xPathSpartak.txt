@@ -1,0 +1,56 @@
+//Логотип
+
+//img[contains(@alt, 'логотип Спартак')]
+
+//Ch
+
+//a[href^="/cn/"]
+
+//a[text()= 'Ch']
+
+//VK
+
+//img[contains(@src, '/bitrix/templates/our_shop/images/VK.svg')]
+
+//Импрессо
+
+//a[text() = 'Импрессо']
+//div[@class='content_menu']//a[@href='/products/Impresso/']
+
+//Youtube
+
+//header//img[@src='/bitrix/templates/our_shop/images/youtube.svg']
+
+//Информация для партнеров
+
+//div[@class= 'header_wrap ' ]//span[text()='Информация для партнеров']
+
+//Поиск
+
+//div[@class = 'header__search']
+
+//Иконка "глаз"
+
+//span[@class = 'header__eye']
+//div[@class='lang-block']/span
+
+//Ru
+
+//a[text()= 'Ru']
+
+//Следующая страница
+
+//li[@class= 'flex-nav-next']
+
+//Навигация
+
+//a[text()=2 or text()=1]
+
+//Каталог
+
+//a[@class = 'download-catalog']
+
+//VK
+
+//header//img[@src = '/bitrix/templates/our_shop/images/VK.svg']
+//div[@class='top_slider_wrapp']/ul/li[3]//img
