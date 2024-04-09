@@ -1,0 +1,34 @@
+//Лого
+
+//img[@class ='ph-logo__img svelte-18tlzaw']
+//a[@data-testid='whiteline-logo-item']
+
+//Регистрация
+
+//a[text()= 'Регистрация']
+//div[@class='ph-auth svelte-1au561b']/a
+
+//Войти
+
+//button[@class= 'ph-login svelte-1au561b']
+
+//Войти
+
+//button[@class= 'resplash-btn resplash-btn_primary resplash-btn_mailbox-big cea-fefe-ehxscg']
+
+//Создать почту
+
+//a[@class = 'resplash-btn resplash-btn_outlined-themed resplash-btn_mailbox-big cea-fefe-ehxscg']
+
+//Леди
+
+//a[text()= 'Леди']
+
+//Лукашенко: Запад хочет направить в Беларусь войска
+
+(//div[@class= 'news-item cea-fefe-1ifzevr'])[1]
+
+//Иконка (подробнее)
+
+//a[@class= 'weather__arrow cea-fefe-fswwb']
+//div[@class='weather cea-fefe-fswwb']//a[3]
