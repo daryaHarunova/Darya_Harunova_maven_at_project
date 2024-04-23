@@ -1,9 +1,7 @@
 package pageObjects.DemoQa;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 
 public class HomePage {
@@ -31,7 +29,11 @@ public class HomePage {
     }
 
     public void selectValueFromMultiselectDropdown() throws InterruptedException {
-        driver.findElement(By.xpath("(//div[@class= ' css-2b097c-container'])[3]")).click();
+        WebElement drop = driver.findElement(By.xpath("(//div[@class= ' css-2b097c-container'])[3]"));
+        drop.click();
+        WebElement el = driver.findElement(By.xpath("(//*[text() = 'Blue'])[2]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", el);
+        el.click();
     }
 
 
