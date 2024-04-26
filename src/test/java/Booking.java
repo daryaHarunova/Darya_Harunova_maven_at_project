@@ -41,8 +41,6 @@ public class Booking {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         driver.findElement(By.xpath("//div[@id='filter_group_review_score_:r1e:']//*[contains(text(),'Достаточно хорошо: 6+')]")).click(); // select rating 6+
-
-
     }
 
     @After
