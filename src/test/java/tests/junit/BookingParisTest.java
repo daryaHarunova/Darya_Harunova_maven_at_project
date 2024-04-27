@@ -1,7 +1,5 @@
 package tests.junit;
 
-import driver.Driver;
-import org.junit.After;
 import org.junit.Test;
 import pages.Booking.HomePageBooking;
 import pages.Booking.ResultPageBooking;
