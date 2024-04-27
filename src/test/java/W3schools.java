@@ -23,25 +23,7 @@ public class W3schools {
 
     @Test
     public void testW3() throws InterruptedException {
-        driver.get("https://www.w3schools.com/java/");
-        WebElement tutorial =
-                driver.findElement(By.xpath("//span[@class = 'color_h1']"));
-        Actions make = new Actions(driver);
-        make
-                .doubleClick(tutorial)
-                .keyDown(Keys.LEFT_CONTROL)
-                .sendKeys("c")
-                .keyUp(Keys.LEFT_CONTROL)
-                .build().perform();
-        driver.get("https://google.com");
-        WebElement search = driver.findElement(By.xpath("//textarea[@name='q']"));
-        make
-                .keyDown(Keys.LEFT_CONTROL)
-                .sendKeys("v")
-                .keyUp(Keys.LEFT_CONTROL)
-                .build().perform();
-        search.sendKeys(Keys.RETURN);
-        Thread.sleep(3000);
+
 
         List<WebElement> actualResult = driver.findElements(By.xpath("//div[@class='MjjYud']/div[@jscontroller='SC7lYd']//h3"));
 
