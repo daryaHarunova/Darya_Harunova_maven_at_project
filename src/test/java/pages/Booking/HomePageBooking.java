@@ -6,6 +6,9 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import pages.BasePage;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 
 public class HomePageBooking extends BasePage {
@@ -57,5 +60,22 @@ public class HomePageBooking extends BasePage {
         Assert.assertEquals("Value of the tooltip for languages is not correct", driver.findElement(By.xpath("//div[text()='Выберите язык']")).getText(), "Выберите язык");
     }
 
+    public void searchTenthHotel(){
+        WebElement tenHotel = driver.findElement(By.xpath("//div[@data-testid='property-card'][10]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", tenHotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.backgroundColor = 'green'", tenHotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.color = 'red'", tenHotel);
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click()", tenHotel);
+    }
+
+    public  void takeScreen(){
+        byte[] asBytes = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+
+        try {
+            Files.write(Paths.get("C:\\Users\\paulk\\IdeaProjects\\hometask_hotel\\hotel.png"), asBytes);
+        } catch (IOException e) {
+            e.getStackTrace();
+        }
+    }
 
 }
