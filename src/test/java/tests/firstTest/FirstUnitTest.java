@@ -1,3 +1,5 @@
+package tests.firstTest;
+
 import org.example.UnitClass;
 
 public class FirstUnitTest {

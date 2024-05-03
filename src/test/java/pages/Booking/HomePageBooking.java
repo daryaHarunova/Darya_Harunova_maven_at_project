@@ -14,9 +14,29 @@ import java.time.LocalDate;
 public class HomePageBooking extends BasePage {
     WebDriver driver = Driver.getWebDriver();
 
+
     public void acceptAllCookie() {
         driver.findElement(By.xpath("//button[@id ='onetrust-accept-btn-handler']")).click();
         driver.findElement(By.xpath("//button[@aria-label = 'Скрыть меню входа в аккаунт.']")).click();
+    }
+
+    public void signIn() throws InterruptedException {
+        driver.findElement(By.xpath("//a[@aria-label= 'Войти в аккаунт']")).click();
+        WebElement email = driver.findElement(By.xpath("//input[@type= 'email']"));
+        email.click();
+        email.sendKeys("darya.harunova99@gmail.com");
+        WebElement submitButton = driver.findElement(By.xpath("//button[@type= 'submit']"));
+        submitButton.click();
+        Thread.sleep(2000);
+        WebElement password = driver.findElement(By.xpath("//input[@type= 'password']"));
+        password.sendKeys("78345699aA");
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//button[@type= 'submit']")).click();
+        Actions actions = new Actions(driver);
+        WebElement button = driver.findElement(By.xpath("//span[text()='Нажмите и удерживайте эту кнопку, чтобы пройти проверку безопасности.']/parent::div/p"));
+
+        Thread.sleep(3000);
+        driver.findElement(By.xpath("//div[@role='dialog']//button[@aria-label='Dismiss']")).click();
     }
 
     public void enterCity(String city) {
@@ -77,5 +97,20 @@ public class HomePageBooking extends BasePage {
             e.getStackTrace();
         }
     }
+
+    public void addFirstHotelToFavorites(){
+        WebElement firstHotel = driver.findElement(By.xpath("//div[@data-testid='property-card'][1]//*[@data-testid='wishlist-button']"));
+    }
+
+    public void scrollToLastHotel(){
+        WebElement lastHotel = driver.findElement(By.xpath("//div[@data-testid='property-card'][25]"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", lastHotel);
+    }
+
+
+    public void addLastHotelToFavorites(){
+        WebElement lastHotel = driver.findElement(By.xpath("//div[@data-testid='property-card'][25]//*[@data-testid='wishlist-button']"));
+    }
+
 
 }
