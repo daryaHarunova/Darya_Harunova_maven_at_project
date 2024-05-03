@@ -13,6 +13,16 @@ public class BookingStepDefinition {
         homePage.open("https://booking.com");
     }
 
+    @When("Accept all cookie")
+    public void acceptAllCookie() {
+        homePage.acceptAllCookie();
+    }
+
+    @When("Sign In")
+    public void signIn() throws InterruptedException {
+        homePage.signIn();
+    }
+
     @When("Input and submit city name in search field")
     public void selectCityViaEnter() {
         homePage.enterCity("Мадрид");

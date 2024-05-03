@@ -1,9 +1,11 @@
+package tests.firstTest;
+
 import org.example.UnitClass;
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
 
-public class FirstUnitTestNGTests {
+public class FirstUnitJUnitTests {
 
     @Test
     public void firstTest() {
@@ -12,7 +14,7 @@ public class FirstUnitTestNGTests {
         // First test -> branches -> true true
 
         int firstActualResult = myClass.getNumber (-1, -100);
-        Assert.assertEquals(48, firstActualResult);
+        assertEquals(48, firstActualResult);
     }
 
     @Test
@@ -22,7 +24,7 @@ public class FirstUnitTestNGTests {
         // Second test -> branches -> false false
 
         int result = myClass.getNumber (1, 20);
-        Assert.assertEquals(51, result);
+        assertEquals(51, result);
     }
 
     @Test
@@ -32,7 +34,7 @@ public class FirstUnitTestNGTests {
         // Third test -> branches -> true false
 
         int result = myClass.getNumber (0, 5);
-        Assert.assertEquals(50, result);
+        assertEquals(50, result);
     }
 
     @Test
@@ -42,7 +44,7 @@ public class FirstUnitTestNGTests {
         // Fourth test -> branches -> false true
 
         int result = myClass.getNumber (0, -5);
-        Assert.assertEquals(50, result);
+        assertEquals(50, result);
     }
 
 
